@@ -203,6 +203,25 @@
     // Close modal function
     function closeModal() {
       modal.style.display = "none";
-      modal.setAttribute("aria
+      modal.setAttribute("aria-hidden", "true");
+      document.body.style.overflow = "auto";
+    }
 
+    closeModalBtn.addEventListener("click", closeModal);
 
+    // Close modal on clicking outside modal content
+    modal.addEventListener("click", (e) => {
+      if (e.target === modal) {
+        closeModal();
+      }
+    });
+
+    // Optional: Close modal on Escape key press
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && modal.style.display === "flex") {
+        closeModal();
+      }
+    });
+  </script>
+</body>
+</html>
