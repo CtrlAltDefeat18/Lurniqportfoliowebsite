@@ -29,7 +29,6 @@ nav {
   top: 0;
   z-index: 100;
   max-width: 1200px;
-  margin: 0 auto;
 }
 
 .logo img {
@@ -284,4 +283,5 @@ footer {
     font-size: 1.5em;
   }
 }
+
 
