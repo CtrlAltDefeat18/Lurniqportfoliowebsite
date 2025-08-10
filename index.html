@@ -172,37 +172,186 @@
     </style>
 </head>
 <body>
-
+    <!-- NAVBAR -->
     <nav>
         <div class="logo">
-            <img src="logo.png" alt="LurniqHub Logo">
+            <img src="logo.png" alt="Lurniq Logo" />
         </div>
-        <div class="hamburger" id="hamburger">
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
-        <ul id="nav-links">
-            <li><a href="#HOME">Home</a></li>
-            <li><a href="#ABOUT">About</a></li>
-            <li><a href="#GOALS">Goals</a></li>
-            <li><a href="#TEAM">Team</a></li>
-            <li><a href="#CONTACT">Contact</a></li>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#platforms">Our Platforms</a></li>
+            <li><a href="#impact">Impact</a></li>
+            <li><a href="#team">Team</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
 
-    <!-- Your existing sections here -->
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-text" data-aos="fade-up">
+            <h1>Empowering African Youth</h1>
+            <h2><span id="typing"></span></h2>
+            <a href="#platforms" class="cta-btn">Explore Our Work</a>
+        </div>
+    </section>
 
+    <!-- ABOUT -->
+    <section id="about" data-aos="fade-right">
+        <h2>About Us</h2>
+        <p>LurniqHub is a youth-centered African initiative that bridges the gap in education, technology, and opportunity. We build platforms that inspire learning, innovation, and community empowerment.</p>
+    </section>
+
+    <!-- OUR PLATFORMS -->
+    <section id="platforms" data-aos="fade-up">
+        <h2>Our Platforms</h2>
+        <div class="card-container">
+            <div class="card">
+                <img src="platform1.jpg" alt="Lurniq" />
+                <h3>Lurniq</h3>
+                <p>An interactive learning platform with quizzes, resources, and more.</p>
+            </div>
+            <div class="card">
+                <img src="platform2.jpg" alt="JuaAI" />
+                <h3>JuaAI</h3>
+                <p>Your AI-powered education assistant, available anytime, anywhere.</p>
+            </div>
+            <div class="card">
+                <img src="platform3.jpg" alt="LNQ-Lib" />
+                <h3>LNQ-Lib</h3>
+                <p>A digital library unlocking access to knowledge for underserved communities.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- IMPACT GOALS -->
+    <section id="GOALS" data-aos="fade-left">
+        <h2>Our Goals</h2>
+        <div class="goal-stats">
+            <div>
+                <h3>500+</h3>
+                <p>Youth to Reach</p>
+            </div>
+            <div>
+                <h3>20+</h3>
+                <p>Communities to be Served</p>
+            </div>
+            <div>
+                <h3>3</h3>
+                <p>Innovative Platforms</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- TEAM -->
+    <section id="team" data-aos="fade-up">
+        <h2>Meet the Team</h2>
+        <div class="team-container">
+            <div class="team-member" data-aos="zoom-in" 
+                 data-name="Aphelele Mjobo" 
+                 data-role="Co-founder & Development Lead" 
+                 data-bio="Aphelele Mjobo, an IT: Systems Development and postgraduate enterprise management student, co-founded CTG to create scalable, offline-first digital education tools for underserved communities. Combining his background in community engagement, law, and technology, he leads Lurniq’s strategic direction while exploring AI and data-driven solutions to enhance learner support.">
+                <img src="apheleleheadshot.jpg" alt="Aphelele Mjobo" />
+                <h3>Aphelele Mjobo</h3>
+                <p class="role">Co-founder & Development Lead</p>
+                <button class="view-more-btn">View More</button>
+            </div>
+            <div class="team-member" data-aos="zoom-in" 
+                 data-name="Luthando David" 
+                 data-role="Co-founder" 
+                 data-bio="Luthando David, a BA graduate in Legal Theory and History from Rhodes University and current Postgraduate Diploma in Enterprise Management student, is passionate about youth empowerment, education equity, and ethical leadership. With experience in student leadership, tutoring, wellness advocacy, and community initiatives like Lurniq, Luthando aims to use enterprise as a tool for inclusive and sustainable social transformation.">
+                <img src="member2.jpg" alt="Luthando David" />
+                <h3>Luthando David</h3>
+                <p class="role">Co-founder</p>
+                <button class="view-more-btn">View More</button>
+            </div>
+            <div class="team-member" data-aos="zoom-in" 
+                 data-name="Unathi" 
+                 data-role="Co-founder & Financial Manager" 
+                 data-bio="Unathi, a Postgraduate Diploma in Enterprise Management student at Rhodes University, brings both academic expertise and corporate experience from her time as a Junior HR Business Partner at Standard Bank Group. Passionate about youth development and digital inclusion, she is drawn to Lurniq’s mission of empowering underserved communities with the skills and opportunities needed to thrive in the digital economy.">
+                <img src="member3.jpg" alt="Unathi" />
+                <h3>Unathi</h3>
+                <p class="role">Co-founder & Financial Manager</p>
+                <button class="view-more-btn">View More</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" data-aos="fade-up">
+        <h2>Contact Us</h2>
+        <form action="https://formspree.io/f/mqaledry" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required />
+            <input type="email" name="email" placeholder="Your Email" required />
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+        <div class="contact-info">
+            <p><strong>Contact Phone Numbers & Emails:</strong></p>
+            <p>Aphelele: 083 516 3140 | aphelele19mjobo@gmail.com</p>
+            <p>Unathi: 063 001 1578 | unathigongxeka30@gmail.com</p>
+            <p>Luthando: 063 656 6917 | luthandodvd02@gmail.com</p>
+            <p>Facebook: <a href="https://web.facebook.com/DigitalEquityCTG" target="_blank" rel="noopener">DigitalEquityCTG</a></p>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2025 LurniqHub | All Rights Reserved</p>
+    </footer>
+
+    <!-- Modal for Bio -->
+    <div id="bioModal">
+      <div>
+        <button id="closeModal" aria-label="Close modal">&times;</button>
+        <h3 id="modalName"></h3>
+        <p id="modalRole" style="font-weight:600; margin-top:0;"></p>
+        <div id="modalBio"></div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
     <script>
-      document.getElementById('hamburger').addEventListener('click', function() {
-        document.getElementById('nav-links').classList.toggle('active');
+      AOS.init();
+
+      // Modal Elements
+      const modal = document.getElementById('bioModal');
+      const modalName = document.getElementById('modalName');
+      const modalRole = document.getElementById('modalRole');
+      const modalBio = document.getElementById('modalBio');
+      const closeModalBtn = document.getElementById('closeModal');
+
+      // Open modal with team member bio
+      document.querySelectorAll('.view-more-btn').forEach(button => {
+        button.addEventListener('click', () => {
+          const member = button.parentElement;
+          modalName.textContent = member.getAttribute('data-name');
+          modalRole.textContent = member.getAttribute('data-role');
+          modalBio.textContent = member.getAttribute('data-bio');
+          modal.style.display = 'flex';
+          document.body.style.overflow = 'hidden'; // Prevent scroll while modal open
+        });
+      });
+
+      // Close modal function
+      function closeModal() {
+        modal.style.display = 'none';
+        document.body.style.overflow = 'auto';
+      }
+
+      closeModalBtn.addEventListener('click', closeModal);
+
+      // Close modal on clicking outside modal content
+      modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+          closeModal();
+        }
+      });
+
+      // Optional: Close modal on Escape key press
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modal.style.display === 'flex') {
+          closeModal();
+        }
       });
     </script>
 </body>
 </html>
-
-
-
-
-
-
