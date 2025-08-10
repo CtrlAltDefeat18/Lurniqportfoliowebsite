@@ -22,10 +22,7 @@
         align-items: center;
         padding: 1em;
         background: white;
-        position: sticky;
-        top: 0;
-        z-index: 999;
-        border-bottom: 1px solid #ddd;
+        position: relative;
       }
       .logo img {
         height: 60px;
@@ -44,18 +41,18 @@
         font-weight: 600;
       }
 
-      /* Hamburger */
+      /* Hamburger icon */
       .hamburger {
         display: none;
         flex-direction: column;
-        gap: 5px;
         cursor: pointer;
+        gap: 5px;
       }
-      .hamburger span {
+      .hamburger div {
         width: 25px;
         height: 3px;
         background: black;
-        border-radius: 3px;
+        transition: all 0.3s ease;
       }
 
       /* Hero */
@@ -70,7 +67,7 @@
         font-size: 2em;
       }
 
-      /* Card container */
+      /* Cards */
       .card-container {
         display: flex;
         gap: 2em;
@@ -84,7 +81,6 @@
         max-width: 300px;
         flex: 1 1 250px;
         text-align: center;
-        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
       }
       .card img {
         width: 100%;
@@ -127,7 +123,7 @@
         box-sizing: border-box;
       }
 
-      /* View More button */
+      /* View More */
       .view-more-btn {
         background-color: #f8b603;
         color: white;
@@ -144,20 +140,22 @@
       }
 
       /* Responsive */
-      @media (max-width: 768px) {
-        .hamburger {
-          display: flex;
-        }
+      @media screen and (max-width: 430px) {
         nav ul {
-          flex-direction: column;
-          width: 100%;
-          gap: 1em;
-          align-items: center;
-          padding-top: 1em;
-          display: none;
+          position: absolute;
+          top: 70px;
+          right: 0;
           background: white;
+          flex-direction: column;
+          width: 200px;
+          padding: 1em;
+          gap: 1em;
+          display: none;
         }
         nav ul.active {
+          display: flex;
+        }
+        .hamburger {
           display: flex;
         }
         .hero-text h1 {
@@ -174,179 +172,36 @@
     </style>
 </head>
 <body>
-    <!-- NAVBAR -->
+
     <nav>
         <div class="logo">
-            <img src="logo.png" alt="Lurniq Logo" />
+            <img src="logo.png" alt="LurniqHub Logo">
         </div>
         <div class="hamburger" id="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
+            <div></div>
+            <div></div>
+            <div></div>
         </div>
-        <ul id="navLinks">
-            <li><a href="#about">About</a></li>
-            <li><a href="#platforms">Our Platforms</a></li>
-            <li><a href="#impact">Impact</a></li>
-            <li><a href="#team">Team</a></li>
-            <li><a href="#contact">Contact</a></li>
+        <ul id="nav-links">
+            <li><a href="#HOME">Home</a></li>
+            <li><a href="#ABOUT">About</a></li>
+            <li><a href="#GOALS">Goals</a></li>
+            <li><a href="#TEAM">Team</a></li>
+            <li><a href="#CONTACT">Contact</a></li>
         </ul>
     </nav>
 
-    <!-- HERO -->
-    <section class="hero">
-        <div class="hero-text" data-aos="fade-up">
-            <h1>Empowering African Youth</h1>
-            <h2><span id="typing"></span></h2>
-            <a href="#platforms" class="cta-btn">Explore Our Work</a>
-        </div>
-    </section>
+    <!-- Your existing sections here -->
 
-    <!-- ABOUT -->
-    <section id="about" data-aos="fade-right">
-        <h2>About Us</h2>
-        <p>LurniqHub is a youth-centered African initiative that bridges the gap in education, technology, and opportunity. We build platforms that inspire learning, innovation, and community empowerment.</p>
-    </section>
-
-    <!-- OUR PLATFORMS -->
-    <section id="platforms" data-aos="fade-up">
-        <h2>Our Platforms</h2>
-        <div class="card-container">
-            <div class="card">
-                <img src="platform1.jpg" alt="Lurniq" />
-                <h3>Lurniq</h3>
-                <p>An interactive learning platform with quizzes, resources, and more.</p>
-            </div>
-            <div class="card">
-                <img src="platform2.jpg" alt="JuaAI" />
-                <h3>JuaAI</h3>
-                <p>Your AI-powered education assistant, available anytime, anywhere.</p>
-            </div>
-            <div class="card">
-                <img src="platform3.jpg" alt="LNQ-Lib" />
-                <h3>LNQ-Lib</h3>
-                <p>A digital library unlocking access to knowledge for underserved communities.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- IMPACT GOALS -->
-    <section id="GOALS" data-aos="fade-left">
-        <h2>Our Goals</h2>
-        <div class="goal-stats">
-            <div>
-                <h3>500+</h3>
-                <p>Youth to Reach</p>
-            </div>
-            <div>
-                <h3>20+</h3>
-                <p>Communities to be Served</p>
-            </div>
-            <div>
-                <h3>3</h3>
-                <p>Innovative Platforms</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- TEAM -->
-    <section id="team" data-aos="fade-up">
-        <h2>Meet the Team</h2>
-        <div class="team-container">
-            <!-- Team members (unchanged content) -->
-            <!-- Example below -->
-            <div class="team-member" data-aos="zoom-in" 
-                 data-name="Aphelele Mjobo" 
-                 data-role="Co-founder & Development Lead" 
-                 data-bio="Aphelele Mjobo, an IT: Systems Development and postgraduate enterprise management student, co-founded CTG to create scalable, offline-first digital education tools for underserved communities. Combining his background in community engagement, law, and technology, he leads Lurniq’s strategic direction while exploring AI and data-driven solutions to enhance learner support.">
-                <img src="apheleleheadshot.jpg" alt="Aphelele Mjobo" />
-                <h3>Aphelele Mjobo</h3>
-                <p class="role">Co-founder & Development Lead</p>
-                <button class="view-more-btn">View More</button>
-            </div>
-            <!-- Add your other team members here -->
-        </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact" data-aos="fade-up">
-        <h2>Contact Us</h2>
-        <form action="https://formspree.io/f/mqaledry" method="POST">
-            <input type="text" name="name" placeholder="Your Name" required />
-            <input type="email" name="email" placeholder="Your Email" required />
-            <textarea name="message" placeholder="Your Message" required></textarea>
-            <button type="submit">Send Message</button>
-        </form>
-        <div class="contact-info">
-            <p><strong>Contact Phone Numbers & Emails:</strong></p>
-            <p>Aphelele: 083 516 3140 | aphelele19mjobo@gmail.com</p>
-            <p>Unathi: 063 001 1578 | unathigongxeka30@gmail.com</p>
-            <p>Luthando: 063 656 6917 | luthandodvd02@gmail.com</p>
-            <p>Facebook: <a href="https://web.facebook.com/DigitalEquityCTG" target="_blank" rel="noopener">DigitalEquityCTG</a></p>
-        </div>
-    </section>
-
-    <footer>
-        <p>© 2025 LurniqHub | All Rights Reserved</p>
-    </footer>
-
-    <!-- Modal for Bio -->
-    <div id="bioModal">
-      <div>
-        <button id="closeModal" aria-label="Close modal">&times;</button>
-        <h3 id="modalName"></h3>
-        <p id="modalRole" style="font-weight:600; margin-top:0;"></p>
-        <div id="modalBio"></div>
-      </div>
-    </div>
-
-    <script src="script.js"></script>
     <script>
-      AOS.init();
-
-      // Hamburger toggle
-      const hamburger = document.getElementById('hamburger');
-      const navLinks = document.getElementById('navLinks');
-      hamburger.addEventListener('click', () => {
-        navLinks.classList.toggle('active');
-      });
-
-      // Modal script (unchanged)
-      const modal = document.getElementById('bioModal');
-      const modalName = document.getElementById('modalName');
-      const modalRole = document.getElementById('modalRole');
-      const modalBio = document.getElementById('modalBio');
-      const closeModalBtn = document.getElementById('closeModal');
-
-      document.querySelectorAll('.view-more-btn').forEach(button => {
-        button.addEventListener('click', () => {
-          const member = button.parentElement;
-          modalName.textContent = member.getAttribute('data-name');
-          modalRole.textContent = member.getAttribute('data-role');
-          modalBio.textContent = member.getAttribute('data-bio');
-          modal.style.display = 'flex';
-          document.body.style.overflow = 'hidden';
-        });
-      });
-
-      function closeModal() {
-        modal.style.display = 'none';
-        document.body.style.overflow = 'auto';
-      }
-      closeModalBtn.addEventListener('click', closeModal);
-      modal.addEventListener('click', (e) => {
-        if (e.target === modal) {
-          closeModal();
-        }
-      });
-      document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && modal.style.display === 'flex') {
-          closeModal();
-        }
+      document.getElementById('hamburger').addEventListener('click', function() {
+        document.getElementById('nav-links').classList.toggle('active');
       });
     </script>
 </body>
 </html>
+
+
 
 
 
