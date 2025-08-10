@@ -17,19 +17,6 @@ body {
   color: #333;
 }
 
-/* Navbar */
-nav {
-  background: #000;
-  color: #fff;
-  padding: 1em 5%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  max-width: 1200px;
-}
 
 .logo img {
   height: 90px;
@@ -283,5 +270,6 @@ footer {
     font-size: 1.5em;
   }
 }
+
 
 
